@@ -53,13 +53,13 @@
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="/" aria-label="4Levels Sports Advisory, home"><img src="/assets/brand/logo-horizontal-light.png" alt="" width="300" height="100"></a>
-    <nav class="nav" aria-label="Main"><a href="/services/">What we do</a><a href="/team/">Our team</a><a href="/clients/">Our athletes</a><a class="btn" href="/contact/">Contact</a></nav>
+    <nav class="nav" aria-label="Main"><a href="/services/">Services</a><a href="/team/">Team</a><a href="/clients/">Clients</a><a class="btn" href="/contact/">Contact</a></nav>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Menu <span class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span></span></button>
   </div>
 </header>
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="menu-top"><img src="/assets/brand/logo-horizontal-light.png" alt="4Levels Sports Advisory" width="300" height="100"><button class="menu-close" id="menuClose" type="button">Close</button></div>
-  <nav aria-label="Phone"><ul><li><a href="/">Home<span aria-hidden="true">→</span></a></li><li><a href="/services/">What we do<span aria-hidden="true">→</span></a></li><li><a href="/team/">Our team<span aria-hidden="true">→</span></a></li><li><a href="/clients/">Our athletes<span aria-hidden="true">→</span></a></li><li><a href="/contact/" aria-current="page">Contact<span aria-hidden="true">→</span></a></li></ul></nav>
+  <nav aria-label="Phone"><ul><li><a href="/">Home<span aria-hidden="true">→</span></a></li><li><a href="/services/">Services<span aria-hidden="true">→</span></a></li><li><a href="/team/">Team<span aria-hidden="true">→</span></a></li><li><a href="/clients/">Clients<span aria-hidden="true">→</span></a></li><li><a href="/contact/" aria-current="page">Contact<span aria-hidden="true">→</span></a></li></ul></nav>
   <a class="btn" href="/contact/">Start the conversation</a>
 </div>
 <main id="main" tabindex="-1">
@@ -67,10 +67,9 @@
   <div class="wrap">
     <span class="eyebrow">Contact</span>
     <h1 id="page-h">Start the conversation.</h1>
-    <p class="lede">Three quick steps. It takes about a minute.</p>
   </div>
 </section>
-<section style="padding-top:28px" aria-label="Contact form">
+<section style="padding-top:20px" aria-label="Contact form">
   <div class="wrap contact-grid">
     <div class="contact-side">
       <p>Athletes and families: tell us a little about yourself and what you are looking for.</p>
@@ -86,25 +85,20 @@
       <input type="hidden" name="_page" value="/contact/">
       <input type="hidden" name="_started" id="startedAt" value="">
       <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-      <div class="step"><span class="step-n" aria-hidden="true">1</span>
-        <fieldset class="chips"><legend>Who are you?</legend><div class="chip-row"><label class="chip"><input type="radio" name="I am" value="An athlete" id="f-role-0"><span>An athlete</span></label><label class="chip"><input type="radio" name="I am" value="A parent or family member" id="f-role-1"><span>A parent or family member</span></label><label class="chip"><input type="radio" name="I am" value="A coach" id="f-role-2"><span>A coach</span></label><label class="chip"><input type="radio" name="I am" value="Other" id="f-role-3"><span>Other</span></label></div></fieldset>
+      <div class="form-row">
+        <div class="field"><label for="f-name">Name (required)</label><input id="f-name" name="Name" type="text" autocomplete="name" required aria-describedby="formMsg"></div>
+        <div class="field"><label for="f-email">Email (required)</label><input id="f-email" name="Email" type="email" autocomplete="email" required aria-describedby="formMsg"></div>
       </div>
-      <div class="step"><span class="step-n" aria-hidden="true">2</span>
-        <fieldset class="chips"><legend>Level of play</legend><div class="chip-row"><label class="chip"><input type="radio" name="Level of play" value="High school" id="f-level-0"><span>High school</span></label><label class="chip"><input type="radio" name="Level of play" value="College" id="f-level-1"><span>College</span></label><label class="chip"><input type="radio" name="Level of play" value="NBA / G League" id="f-level-2"><span>NBA / G League</span></label><label class="chip"><input type="radio" name="Level of play" value="Overseas" id="f-level-3"><span>Overseas</span></label><label class="chip"><input type="radio" name="Level of play" value="Not a player" id="f-level-4"><span>Not a player</span></label></div></fieldset>
+      <div class="form-row">
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="f-role">I am</label>
+          <select id="f-role" name="I am"><option>An athlete</option><option>A parent or family member</option><option>A coach</option><option>A brand or partner</option><option>Other</option></select></div>
       </div>
-      <div class="step"><span class="step-n" aria-hidden="true">3</span>
-        <div class="step-fields">
-          <p class="step-title">How do we reach you?</p>
-          <div class="form-row">
-            <div class="field"><label for="f-name">Name (required)</label><input id="f-name" name="Name" type="text" autocomplete="name" required aria-describedby="formMsg"></div>
-            <div class="field"><label for="f-email">Email (required)</label><input id="f-email" name="Email" type="email" autocomplete="email" inputmode="email" required aria-describedby="formMsg"></div>
-          </div>
-          <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel"></div>
-          <div class="field"><label for="f-msg">Anything else? (optional)</label><textarea id="f-msg" name="Message" rows="4"></textarea></div>
-        </div>
-      </div>
+      <div class="field"><label for="f-level">Level of play</label>
+        <select id="f-level" name="Level of play"><option value="">Choose one</option><option>High school</option><option>College</option><option>NBA / G League</option><option>Overseas</option><option>Not a player</option></select></div>
+      <div class="field"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="Message"></textarea></div>
       <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
-      <div><button class="btn btn-big" type="submit" id="sendBtn">Send message</button></div>
+      <div><button class="btn" type="submit" id="sendBtn">Send message</button></div>
       <p class="form-note">We only use your details to respond to your enquiry.</p>
     </form>
   </div>
@@ -114,7 +108,7 @@
   <div class="wrap">
     <div class="foot-top">
       <div><img src="/assets/brand/logo-stacked-light.png" alt="4Levels Sports Advisory" width="600" height="555" loading="lazy"><p class="slogan">Enhance. Elevate. Enlighten. Empower.</p></div>
-      <nav class="foot-nav" aria-label="Footer"><a href="/">Home</a><a href="/services/">What we do</a><a href="/team/">Our team</a><a href="/clients/">Our athletes</a><a href="/contact/">Contact</a></nav>
+      <nav class="foot-nav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/team/">Team</a><a href="/clients/">Clients</a><a href="/contact/">Contact</a></nav>
     </div>
     <div class="foot-base">
       <p>© 2026 4Levels Sports Advisory. All rights reserved.</p>

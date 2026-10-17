@@ -183,48 +183,16 @@ PAGES = [
     {"path": "/", "file": "index.html", "nav": None, "title": "4Levels Sports Advisory | Basketball Sports Advisory & NIL",
      "h": "Home",
      "desc": "4Levels Sports Advisory guides basketball players in high school, college, the NBA and overseas. Enhance. Elevate. Enlighten. Empower."},
-    {"path": "/services/", "file": "services/index.html", "nav": "What we do", "title": "Services: The Four Levels | 4Levels Sports Advisory",
+    {"path": "/services/", "file": "services/index.html", "nav": "Services", "title": "Services: The Four Levels | 4Levels Sports Advisory",
      "h": "Services",
      "desc": "The 4Levels framework: Enhance your foundation, Elevate your visibility, Enlighten your perspective and Empower your legacy. Plus our six-step NIL strategy."},
-    {"path": "/team/", "file": "team/index.html", "nav": "Our team", "title": "Our Team | 4Levels Sports Advisory",
+    {"path": "/team/", "file": "team/index.html", "nav": "Team", "title": "Our Team | 4Levels Sports Advisory",
      "h": "Team",
      "desc": "Meet the 4Levels team: Justin Brown, David Cline, Romell Witherspoon, Matt McCall and Sophie Siegel. NBA, NIL, player development and marketing."},
-    {"path": "/clients/", "file": "clients/index.html", "nav": "Our athletes", "title": "Our Athletes | 4Levels Sports Advisory",
-     "h": "Our athletes",
+    {"path": "/clients/", "file": "clients/index.html", "nav": "Clients", "title": "Our Clients | 4Levels Sports Advisory",
+     "h": "Clients",
      "desc": "The athletes 4Levels Sports Advisory works with, from high school prospects and college players to pros in the NBA and overseas."},
     {"path": "/contact/", "file": "contact/index.html", "nav": "Contact", "title": "Contact | 4Levels Sports Advisory",
      "h": "Contact",
      "desc": "Start a conversation with 4Levels Sports Advisory about NBA and NIL representation, player development and life after basketball."},
-]
-
-
-# ---------------------------------------------------------------- v3: "where are you?" chooser
-# Each card sends the visitor to the contact form with their answers already ticked.
-# Supported by the deck: high school (Matt McCall: committing out of high school), college
-# (NIL, transfer portal), pros (Justin Brown: NBA and overseas), families (Romell: athlete +
-# family advisory).
-PATHS = [
-    {"key": "hs", "title": "High school player", "line": "Weighing offers and getting ready to commit.",
-     "role": "An athlete", "level": "High school"},
-    {"key": "col", "title": "College athlete", "line": "NIL deals, the transfer portal and the jump to the pros.",
-     "role": "An athlete", "level": "College"},
-    {"key": "pro", "title": "Pro, NBA or overseas", "line": "Contracts, transitions and the business of a pro career.",
-     "role": "An athlete", "level": ""},
-    {"key": "fam", "title": "Parent or family", "line": "Guidance for the people behind the player.",
-     "role": "A parent or family member", "level": ""},
-]
-
-# ---------------------------------------------------------------- v3: plain-answer FAQ (home page)
-# Answers use deck facts only; the NIL definition is general knowledge.
-FAQ = [
-    ("What is 4Levels Sports Advisory?",
-     "A basketball sports advisory firm. We help players build their game, their name, their understanding of money and contracts, and a life after basketball. We call those the four levels: Enhance, Elevate, Enlighten and Empower."),
-    ("Who do you work with?",
-     "High school prospects, college athletes and pros in the NBA and overseas, and their families."),
-    ("What is NIL?",
-     "NIL stands for name, image and likeness. It means athletes can be paid for things like endorsements, appearances and social media posts. The rules differ by state and by school, so check them before you sign anything."),
-    ("Who is on the 4Levels team?",
-     "Justin Brown (founder and CEO, a certified NBA agent), co-founder David Cline, Romell Witherspoon, Matt McCall and Sophie Siegel. Their full bios are on the Our team page."),
-    ("How do I get started?",
-     "Fill in the short form on the contact page. Tell us who you are, your level of play and how to reach you."),
 ]

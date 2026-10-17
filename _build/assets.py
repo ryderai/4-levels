@@ -162,7 +162,7 @@ def card(slug, kicker, title):
 card("home", "Basketball sports advisory", "Enhance. Elevate. Enlighten. Empower.")
 card("services", "The four levels", "Foundation. Visibility. Perspective. Legacy.")
 card("team", "4Levels Sports Advisory", "Meet the team")
-card("clients", "4Levels Sports Advisory", "Our athletes")
+card("clients", "4Levels Sports Advisory", "Our clients")
 card("contact", "4Levels Sports Advisory", "Start the conversation")
 card("404", "4Levels Sports Advisory", "Page not found")
 print("assets ok")

@@ -113,14 +113,6 @@ async def run():
         await page.click("#sendBtn"); await page.wait_for_timeout(150)
         t = await page.evaluate("[document.getElementById('formMsg').textContent, document.activeElement.id, document.getElementById('f-name').getAttribute('aria-invalid')]")
         if "name" not in t[0].lower() or t[1] != "f-name": bad(f"form guard {t}")
-        # prefill from the chooser
-        await page.goto(BASE + "/contact/?i=col"); await page.wait_for_timeout(200)
-        pf = await page.evaluate("[...document.querySelectorAll('input[type=radio]:checked')].map(r=>r.value)")
-        if pf != ["An athlete", "College"]: bad(f"prefill {pf}")
-        # marquee pause
-        await page.goto(BASE + "/"); await page.click(".marquee-pause")
-        ps = await page.evaluate("[document.querySelector('.marquee').classList.contains('paused'), document.querySelector('.marquee-pause').getAttribute('aria-pressed')]")
-        if ps != [True, "true"]: bad(f"marquee pause {ps}")
         # wire draws on scroll
         await page.set_viewport_size({"width": 1440, "height": 900}); await page.goto(BASE + "/")
         await page.evaluate("document.getElementById('levelsTrack').scrollIntoView({block:'center'})"); await page.wait_for_timeout(1500)
