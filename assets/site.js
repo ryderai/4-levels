@@ -36,7 +36,8 @@
   /* 2. THE MARK — the 4 rises, the bars punch out. Replays on click or when scrolled back to. */
   var mark = document.getElementById('heroMark');
   if(mark){
-    var play = function(){ mark.classList.remove('play'); void mark.getBoundingClientRect(); mark.classList.add('play'); };
+    var heroEl = document.querySelector('.hero');
+    var play = function(){ mark.classList.remove('play'); void mark.getBoundingClientRect(); mark.classList.add('play'); if(heroEl) heroEl.classList.add('play'); };
     if(!reduced){
       setTimeout(play, 150);
       mark.addEventListener('click', play);
@@ -52,6 +53,46 @@
   if(pc && heroBtns && 'IntersectionObserver' in window){
     new IntersectionObserver(function(es){ es.forEach(function(e){ pc.classList.toggle('away', e.isIntersecting || e.boundingClientRect.top > 0); }); }).observe(heroBtns);
   }else if(pc){ pc.classList.remove('away'); }
+
+  if(mark && reduced){ var h0 = document.querySelector('.hero'); if(h0) h0.classList.add('play'); }
+
+  /* 2c. MARQUEE pause */
+  var mq = document.querySelector('.marquee'), mqBtn = document.querySelector('.marquee-pause');
+  if(mq && mqBtn){
+    mqBtn.addEventListener('click', function(){
+      var p = mq.classList.toggle('paused');
+      mqBtn.setAttribute('aria-pressed', p ? 'true' : 'false');
+      mqBtn.textContent = p ? 'Play' : 'Pause';
+      mqBtn.setAttribute('aria-label', p ? 'Play the moving words' : 'Pause the moving words');
+    });
+  }
+
+  /* 2d. STAIRCASE (services) — the sticky number and bars follow the level you are reading */
+  var stairNum = document.getElementById('stairNum');
+  var svcs = document.querySelectorAll('.svc[data-level]');
+  if(svcs.length){
+    var bars = document.querySelectorAll('.stair-bars i'), jumps = document.querySelectorAll('.jump a');
+    var setLevel = function(n, el){
+      if(stairNum){ stairNum.textContent = '0' + n; document.getElementById('stairName').textContent = el.querySelector('h2').textContent; }
+      bars.forEach(function(b, k){ b.classList.toggle('on', k < n); });
+      jumps.forEach(function(a, k){ a.classList.toggle('on', k === n - 1); if(k === n - 1) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
+    };
+    setLevel(1, svcs[0]);
+    if('IntersectionObserver' in window){
+      var so = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if(e.isIntersecting) setLevel(+e.target.dataset.level, e.target); });
+      }, {rootMargin:'-45% 0px -50% 0px'});
+      svcs.forEach(function(s){ so.observe(s); });
+    }
+  }
+
+  /* 2e. CONTACT PREFILL — the "where are you?" cards send ?i=hs|col|pro|fam */
+  var pre = {hs:['An athlete','High school'], col:['An athlete','College'], pro:['An athlete',''], fam:['A parent or family member','']};
+  var key = new URLSearchParams(location.search).get('i');
+  if(key && pre[key] && document.getElementById('leadForm')){
+    var tick = function(name, val){ if(!val) return; document.querySelectorAll('input[name="' + name + '"]').forEach(function(r){ if(r.value === val) r.checked = true; }); };
+    tick('I am', pre[key][0]); tick('Level of play', pre[key][1]);
+  }
 
   /* 3. REVEAL ON SCROLL (content is visible without JS; html.js gates the effect) */
   var rv = document.querySelectorAll('.reveal');

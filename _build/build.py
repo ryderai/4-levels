@@ -71,6 +71,9 @@ def graph(page):
             nodes.append({"@type": "Service", "@id": f"{URL}/services/#{lv['slug']}", "name": f"{lv['name']}: {lv['role']}",
                           "description": lv["long"], "provider": {"@id": ORG_ID},
                           "serviceType": ", ".join(i[0] for i in lv["items"])})
+    if page["path"] == "/":
+        nodes.append({"@type": "FAQPage", "@id": URL + "/#faq", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in D.FAQ]})
     if page["path"] != "/":
         crumbs = [{"@type": "ListItem", "position": 1, "name": "Home", "item": URL + "/"},
                   {"@type": "ListItem", "position": 2, "name": page["h"], "item": URL + page["path"]}]
@@ -259,35 +262,72 @@ def cta_band(h="Ready for the next level?", text="Tell us where you are in your 
   </div>
 </section>"""
 
+def marquee():
+    words = "".join(f'<span>{E(lv["name"])}</span><i aria-hidden="true"></i>' for lv in D.LEVELS)
+    return f"""<div class="marquee" aria-label="{E(D.SLOGAN)}">
+  <div class="marquee-track" aria-hidden="true"><div class="marquee-row">{words}{words}</div><div class="marquee-row">{words}{words}</div></div>
+  <button class="marquee-pause" type="button" aria-pressed="false" aria-label="Pause the moving words">Pause</button>
+</div>"""
+
+def paths_block():
+    cards = []
+    for p in D.PATHS:
+        q = f"/contact/?i={p['key']}"
+        cards.append(f"""<a class="path" href="{q}">
+  <b>{E(p['title'])}</b>
+  <span class="path-line">{E(p['line'])}</span>
+  <span class="path-go" aria-hidden="true">Start here →</span>
+</a>""")
+    return '<div class="paths">' + "".join(cards) + "</div>"
+
+def faq_block():
+    items = "".join(f"""<details class="qa"><summary><span>{E(q)}</span><i aria-hidden="true"></i></summary><p>{E(a)}</p></details>""" for q, a in D.FAQ)
+    return f'<div class="faq">{items}</div>'
+
 def home_body():
+    words = "".join(f'<span class="w w{i}">{E(lv["name"])}.</span> ' for i, lv in enumerate(D.LEVELS, 1))
     return f"""
 <section class="hero band-stone" aria-labelledby="hero-h">
-  <div class="wrap">
-    {HERO_MARK}
-    <span class="eyebrow" style="margin:28px 0 0">{E(D.NAME)}</span>
-    <h1 id="hero-h"><span>Enhance.</span> <span>Elevate.</span> <span>Enlighten.</span> <span>Empower.</span></h1>
-    <p class="lede">A sports advisory firm at the intersection of performance and purpose, guiding basketball players in high school, college, the NBA and overseas.</p>
-    <div class="btn-row"><a class="btn" href="/contact/">Start the conversation</a><a class="btn btn-ghost" href="/services/">See the four levels</a></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">{E(D.NAME)}</span>
+      <h1 id="hero-h">{words.strip()}</h1>
+      <p class="lede">A sports advisory firm at the intersection of performance and purpose, guiding basketball players in high school, college, the NBA and overseas.</p>
+      <div class="btn-row"><a class="btn btn-big" href="#start">Where are you in the game?</a><a class="btn btn-ghost btn-big" href="/contact/">Talk to us</a></div>
+    </div>
+    <div class="hero-mark">{HERO_MARK}</div>
   </div>
 </section>
 
-<section class="band-light mission" aria-labelledby="mission-h">
+{marquee()}
+
+<section class="band-light" id="start" aria-labelledby="start-h">
   <div class="wrap">
-    <span class="eyebrow" id="mission-h">Our mission</span>
-    <div class="grid">
-      <blockquote class="reveal">4Levels exists at the intersection of <strong>performance and purpose.</strong></blockquote>
-      <p class="reveal">{E(D.MISSION)}</p>
-    </div>
+    <span class="eyebrow">Start here</span>
+    <h2 id="start-h">Where are you in the game?</h2>
+    <p class="lede">Pick the one that fits. It takes you straight to a short form with your answer already filled in.</p>
+    {paths_block()}
   </div>
 </section>
 
 {wire_section()}
 
-<section class="band-light" aria-labelledby="team-h">
+<section class="band-light mission" aria-labelledby="mission-h">
   <div class="wrap">
-    <span class="eyebrow">The team</span>
-    <h2 id="team-h">Built from both sides of the table.</h2>
-    <p class="lede">An NBA agent, a banker to pro athletes, a former Lakers player-engagement staffer, a former Division I head coach and a WNBPA-certified agent who runs marketing.</p>
+    <span class="eyebrow" id="mission-h">Our mission</span>
+    <div class="grid">
+      <blockquote class="reveal">A legacy that <strong>outlasts the game.</strong></blockquote>
+      <p class="reveal">{E(D.MISSION)}</p>
+    </div>
+  </div>
+</section>
+
+<section class="band-ink" aria-labelledby="team-h">
+  <div class="wrap">
+    <div class="split-head">
+      <div><span class="eyebrow">Our team</span><h2 id="team-h">Built from both sides of the table.</h2></div>
+      <p class="lede">An NBA agent, a banker to pro athletes, a former Lakers player-engagement staffer, a former Division I head coach and a WNBPA-certified agent who runs marketing.</p>
+    </div>
     {team_grid()}
     <div class="btn-row"><a class="btn btn-ghost" href="/team/">Meet the team</a></div>
   </div>
@@ -302,11 +342,10 @@ def home_body():
   </div>
 </section>
 
-<section class="band-light" aria-labelledby="who-h">
-  <div class="wrap">
-    <span class="eyebrow">Who we work with</span>
-    <h2 id="who-h">Every stage of a basketball career.</h2>
-    {who_block()}
+<section class="band-light" aria-labelledby="faq-h">
+  <div class="wrap faq-grid">
+    <div><span class="eyebrow">Questions</span><h2 id="faq-h">Straight answers.</h2><p class="lede">Still not sure? <a href="/contact/">Send us a message.</a></p></div>
+    {faq_block()}
   </div>
 </section>
 
@@ -314,29 +353,35 @@ def home_body():
 """
 
 def services_body():
+    jump = "".join(f'<a href="#{lv["slug"]}"><span>{lv["n"]}</span>{E(lv["name"])}</a>' for lv in D.LEVELS)
     blocks = []
     for i, lv in enumerate(D.LEVELS, 1):
         dl = "".join(f"<dt>{E(t)}</dt><dd>{E(d)}</dd>" for t, d in lv["items"])
-        blocks.append(f"""<article class="svc" id="{lv['slug']}" aria-labelledby="{lv['slug']}-h">
-  <div class="svc-photo" role="img" aria-label="{E(lv['photo_note'])}"><span class="tag">{E(lv['photo_note'])}</span><span class="bars" aria-hidden="true">{''.join('<i class="on"></i>' if k < i else '<i></i>' for k in range(4))}</span><span class="big" aria-hidden="true">{lv['n']}</span></div>
-  <div>
-    <span class="lvl-tag">Level {i}</span>
-    <h2 id="{lv['slug']}-h">{E(lv['name'])}</h2>
-    <p class="role">{E(lv['role'])}</p>
-    <p>{E(lv['long'])}</p>
-    <dl>{dl}</dl>
-  </div>
+        blocks.append(f"""<article class="svc" id="{lv['slug']}" data-level="{i}" aria-labelledby="{lv['slug']}-h">
+  <span class="lvl-tag">Level {i} of 4</span>
+  <h2 id="{lv['slug']}-h">{E(lv['name'])}</h2>
+  <p class="role">{E(lv['role'])}</p>
+  <p class="svc-long">{E(lv['long'])}</p>
+  <div class="svc-photo" role="img" aria-label="{E(lv['photo_note'])}"><span class="tag">{E(lv['photo_note'])}</span></div>
+  <dl>{dl}</dl>
 </article>""")
+    bars = "".join(f'<i data-bar="{k}"></i>' for k in range(1, 5))
     return f"""
 <section class="page-head band-stone" aria-labelledby="page-h">
   <div class="wrap">
-    <span class="eyebrow">Services</span>
+    <span class="eyebrow">What we do</span>
     <h1 id="page-h">The four levels.</h1>
     <p class="lede">{E(D.MISSION)}</p>
   </div>
 </section>
-<section aria-label="The four levels in detail" style="padding-top:0">
-  <div class="wrap">{''.join(blocks)}</div>
+<nav class="jump" aria-label="Jump to a level"><div class="wrap">{jump}</div></nav>
+<section aria-label="The four levels in detail" class="stair-wrap">
+  <div class="wrap stair">
+    <div class="stair-rail" aria-hidden="true">
+      <div class="stair-sticky"><span class="stair-num" id="stairNum">01</span><span class="stair-name" id="stairName">{E(D.LEVELS[0]['name'])}</span><div class="stair-bars">{bars}</div></div>
+    </div>
+    <div class="stair-body">{''.join(blocks)}</div>
+  </div>
 </section>
 <section class="band-light" aria-labelledby="nil-h">
   <div class="wrap">
@@ -347,6 +392,60 @@ def services_body():
   </div>
 </section>
 {cta_band()}
+"""
+
+def chips(name, legend, options, idp):
+    opts = "".join(f'<label class="chip"><input type="radio" name="{E(name)}" value="{E(o)}" id="{idp}-{k}"><span>{E(o)}</span></label>' for k, o in enumerate(options))
+    return f'<fieldset class="chips"><legend>{E(legend)}</legend><div class="chip-row">{opts}</div></fieldset>'
+
+def contact_body():
+    return f"""
+<section class="page-head band-stone" aria-labelledby="page-h" style="padding-bottom:40px">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1 id="page-h">Start the conversation.</h1>
+    <p class="lede">Three quick steps. It takes about a minute.</p>
+  </div>
+</section>
+<section style="padding-top:28px" aria-label="Contact form">
+  <div class="wrap contact-grid">
+    <div class="contact-side">
+      <p>Athletes and families: tell us a little about yourself and what you are looking for.</p>
+      <ul>
+        <li>NBA and NIL representation</li>
+        <li>Player development and the transfer portal</li>
+        <li>Financial education and life after hoops</li>
+        <li>Brand partnerships and marketing</li>
+      </ul>
+    </div>
+    <form id="leadForm" novalidate>
+      <input type="hidden" name="_form" value="4Levels website enquiry">
+      <input type="hidden" name="_page" value="/contact/">
+      <input type="hidden" name="_started" id="startedAt" value="">
+      <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="step"><span class="step-n" aria-hidden="true">1</span>
+        {chips("I am", "Who are you?", ["An athlete", "A parent or family member", "A coach", "Other"], "f-role")}
+      </div>
+      <div class="step"><span class="step-n" aria-hidden="true">2</span>
+        {chips("Level of play", "Level of play", ["High school", "College", "NBA / G League", "Overseas", "Not a player"], "f-level")}
+      </div>
+      <div class="step"><span class="step-n" aria-hidden="true">3</span>
+        <div class="step-fields">
+          <p class="step-title">How do we reach you?</p>
+          <div class="form-row">
+            <div class="field"><label for="f-name">Name (required)</label><input id="f-name" name="Name" type="text" autocomplete="name" required aria-describedby="formMsg"></div>
+            <div class="field"><label for="f-email">Email (required)</label><input id="f-email" name="Email" type="email" autocomplete="email" inputmode="email" required aria-describedby="formMsg"></div>
+          </div>
+          <div class="field"><label for="f-phone">Phone (optional)</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+          <div class="field"><label for="f-msg">Anything else? (optional)</label><textarea id="f-msg" name="Message" rows="4"></textarea></div>
+        </div>
+      </div>
+      <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+      <div><button class="btn btn-big" type="submit" id="sendBtn">Send message</button></div>
+      <p class="form-note">We only use your details to respond to your enquiry.</p>
+    </form>
+  </div>
+</section>
 """
 
 def team_body():
@@ -389,7 +488,7 @@ def clients_body():
     return f"""
 <section class="page-head band-stone" aria-labelledby="page-h">
   <div class="wrap">
-    <span class="eyebrow">Our clients</span>
+    <span class="eyebrow">Our athletes</span>
     <h1 id="page-h">The 4Levels roster.</h1>
     <p class="lede">From high school prospects and college players to pros in the NBA and overseas.</p>
     {note}
@@ -397,50 +496,6 @@ def clients_body():
 </section>
 <section aria-label="Client roster" style="padding-top:0"><div class="wrap"><div class="roster">{cards}</div></div></section>
 {cta_band("Want to be next?", "Tell us about your game and where you want to take it.")}
-"""
-
-def contact_body():
-    return f"""
-<section class="page-head band-stone" aria-labelledby="page-h" style="padding-bottom:40px">
-  <div class="wrap">
-    <span class="eyebrow">Contact</span>
-    <h1 id="page-h">Start the conversation.</h1>
-  </div>
-</section>
-<section style="padding-top:20px" aria-label="Contact form">
-  <div class="wrap contact-grid">
-    <div class="contact-side">
-      <p>Athletes and families: tell us a little about yourself and what you are looking for.</p>
-      <ul>
-        <li>NBA and NIL representation</li>
-        <li>Player development and the transfer portal</li>
-        <li>Financial education and life after hoops</li>
-        <li>Brand partnerships and marketing</li>
-      </ul>
-    </div>
-    <form id="leadForm" novalidate>
-      <input type="hidden" name="_form" value="4Levels website enquiry">
-      <input type="hidden" name="_page" value="/contact/">
-      <input type="hidden" name="_started" id="startedAt" value="">
-      <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-      <div class="form-row">
-        <div class="field"><label for="f-name">Name (required)</label><input id="f-name" name="Name" type="text" autocomplete="name" required aria-describedby="formMsg"></div>
-        <div class="field"><label for="f-email">Email (required)</label><input id="f-email" name="Email" type="email" autocomplete="email" required aria-describedby="formMsg"></div>
-      </div>
-      <div class="form-row">
-        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="Phone" type="tel" autocomplete="tel"></div>
-        <div class="field"><label for="f-role">I am</label>
-          <select id="f-role" name="I am"><option>An athlete</option><option>A parent or family member</option><option>A coach</option><option>A brand or partner</option><option>Other</option></select></div>
-      </div>
-      <div class="field"><label for="f-level">Level of play</label>
-        <select id="f-level" name="Level of play"><option value="">Choose one</option><option>High school</option><option>College</option><option>NBA / G League</option><option>Overseas</option><option>Not a player</option></select></div>
-      <div class="field"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="Message"></textarea></div>
-      <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
-      <div><button class="btn" type="submit" id="sendBtn">Send message</button></div>
-      <p class="form-note">We only use your details to respond to your enquiry.</p>
-    </form>
-  </div>
-</section>
 """
 
 def notfound_body():
@@ -487,13 +542,14 @@ def md_page(page):
                 "\n".join(f"- **{t['name']}:** {t['role']}" for t in D.TEAM) +
                 f"\n\n## NIL strategy\n\n{md_steps()}\n\n## Who we work with\n\n" +
                 "\n".join(f"- **{t}:** {d}" for t, d in D.AUDIENCE) +
+                "\n\n## Questions\n\n" + "\n\n".join(f"**{q}**\n{a}" for q, a in D.FAQ) +
                 f"\n\n## Contact\n\nStart a conversation at {URL}/contact/\n")
     elif p == "/services/":
         body = f"# Services: the four levels\n\n{D.MISSION}\n\n{md_levels()}\n## NIL strategy framework\n\n{md_steps()}\n"
     elif p == "/team/":
         body = f"# The 4Levels team\n\n{md_team()}"
     elif p == "/clients/":
-        body = ("# Our clients\n\nFrom high school prospects and college players to pros in the NBA and overseas.\n\n" +
+        body = ("# Our athletes\n\nFrom high school prospects and college players to pros in the NBA and overseas.\n\n" +
                 ("\n".join(f"- **{c['name']}:** {c['hometown']} · {c['team']}" for c in D.CLIENTS) if D.CLIENTS
                  else "The client roster is being added.\n"))
     else:
@@ -526,6 +582,9 @@ Cite as: {D.NAME} — {URL}/
 
 ## Team
 """ + "\n".join(f"- **{t['name']}:** {t['role']}" for t in D.TEAM) + f"""
+
+## Questions people ask
+""" + "\n\n".join(f"**{q}**\n{a}" for q, a in D.FAQ) + f"""
 
 ## Pages
 - [Home]({URL}/): who 4Levels is and the four-level framework

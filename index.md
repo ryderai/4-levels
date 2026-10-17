@@ -76,6 +76,23 @@ Empower looks past the final buzzer. It covers ownership, building wealth, givin
 - **College athletes:** NIL, the transfer portal and the step to the pros.
 - **Pros, NBA & overseas:** Contracts, transitions and the business of a pro career.
 
+## Questions
+
+**What is 4Levels Sports Advisory?**
+A basketball sports advisory firm. We help players build their game, their name, their understanding of money and contracts, and a life after basketball. We call those the four levels: Enhance, Elevate, Enlighten and Empower.
+
+**Who do you work with?**
+High school prospects, college athletes and pros in the NBA and overseas, and their families.
+
+**What is NIL?**
+NIL stands for name, image and likeness. It means athletes can be paid for things like endorsements, appearances and social media posts. The rules differ by state and by school, so check them before you sign anything.
+
+**Who is on the 4Levels team?**
+Justin Brown (founder and CEO, a certified NBA agent), co-founder David Cline, Romell Witherspoon, Matt McCall and Sophie Siegel. Their full bios are on the Our team page.
+
+**How do I get started?**
+Fill in the short form on the contact page. Tell us who you are, your level of play and how to reach you.
+
 ## Contact
 
 Start a conversation at https://4-levels.vercel.app/contact/
