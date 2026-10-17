@@ -1,0 +1,4 @@
+# AI search optimization (GEO) for this site by AI Syndicate — https://aisyndicate.com
+# PRELAUNCH: hidden from search until launch day.
+User-agent: *
+Disallow: /

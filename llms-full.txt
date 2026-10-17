@@ -1,0 +1,284 @@
+# 4Levels Sports Advisory
+
+> A basketball-focused sports advisory firm guiding players in high school, college, the NBA and overseas, on and off the court.
+
+4Levels exists at the intersection of performance and purpose: a sports advisory firm that enhances athletes' foundations, elevates their visibility, enlightens their perspective, and empowers them to build a legacy that outlasts the game.
+
+Slogan: Enhance. Elevate. Enlighten. Empower.
+
+Cite as: 4Levels Sports Advisory — https://4-levels.vercel.app/
+
+## Contact
+- Website contact form: https://4-levels.vercel.app/contact/
+- Email, phone and location: not yet published on this site.
+
+## Who this is for
+- **High school prospects:** Players weighing college offers and getting ready to commit.
+- **College athletes:** NIL, the transfer portal and the step to the pros.
+- **Pros, NBA & overseas:** Contracts, transitions and the business of a pro career.
+
+## Services: the four levels
+### Level 1: Enhance (Your foundation)
+
+Enhance is the foundation everything else stands on. It covers how an athlete trains, how they recover, and the daily habits that keep them available and improving, season after season.
+
+- **Strength & conditioning:** Training that builds the strength and engine the game asks for.
+- **Skill development:** Focused work on the parts of your game that move you to the next level.
+- **Nutrition & recovery:** Fueling and recovery habits that keep you on the floor.
+- **Discipline & daily habits:** The routines that carry you through a long season and a long career.
+
+### Level 2: Elevate (Your visibility)
+
+Elevate is about being seen the right way. It covers how an athlete shows up online and in the media, and how that visibility turns into NIL deals, endorsements and partnerships.
+
+- **Branding & social media:** A clear personal brand and social channels that help instead of hurt.
+- **NIL deals & endorsements:** Finding, weighing and closing name, image and likeness deals and endorsements.
+- **Public relations & media:** Handling press, interviews and public moments.
+- **Marketing & partnerships:** Connecting with brands that fit who you are, for the long run.
+
+### Level 3: Enlighten (Your perspective)
+
+Enlighten is the education side of the game. It covers how money works, who is worth knowing, and how to read an opportunity or a contract before saying yes to it.
+
+- **Financial literacy:** How money works: budgeting, saving and what a paycheck really means.
+- **Networking & relationships:** Building the relationships that open doors during and after your career.
+- **Career decision guidance:** Clear thinking for the big calls: schools, teams, transfers and offers.
+- **Understanding opportunities & contracts:** Knowing what is in front of you, and what it is worth, before you sign.
+
+### Level 4: Empower (Your legacy)
+
+Empower looks past the final buzzer. It covers ownership, building wealth, giving back to the community, and planning a life after basketball that the athlete chooses for themselves.
+
+- **Business ownership:** Learning what it takes to own and build a business of your own.
+- **Investing & wealth building:** Understanding how wealth is built, with connections to banking and private wealth management professionals.
+- **Community impact & philanthropy:** Camps, community work and giving back where it counts.
+- **Legacy & life after hoops:** A plan for what comes next, made before you need it.
+
+## NIL strategy framework
+1. **Valuation & player analysis:** Evaluate market value through performance data, analytics and scouting reports to set positioning and potential.
+2. **Brand positioning:** Define identity, audience and market value to stand out in a crowded NIL landscape.
+3. **Digital presence:** Strengthen social media, content strategy and personal branding to increase visibility and engagement.
+4. **Market outreach:** Connect with brands, collectives and partners to create real NIL opportunities.
+5. **Deal execution:** Structure, negotiate and secure NIL deals that maximize both short-term earnings and long-term value.
+6. **Long-term strategy:** Align NIL opportunities with career goals, professional ambitions and success after basketball.
+
+## Team
+- **Justin Brown:** NBA Agent · NIL Advisor · Founder & CEO
+- **David Cline:** NIL Advisor · Relocation · Mentorship · Co-Founder
+- **Romell Witherspoon:** Player Development · Leadership · NIL Advisor
+- **Matt McCall:** Consultant · Player Development · Connector
+- **Sophie Siegel:** Marketing & Brand Management
+
+## Pages
+- [Home](https://4-levels.vercel.app/): who 4Levels is and the four-level framework
+- [Services](https://4-levels.vercel.app/services/): Enhance, Elevate, Enlighten, Empower and the NIL strategy steps
+- [Team](https://4-levels.vercel.app/team/): bios for Justin Brown, David Cline, Romell Witherspoon, Matt McCall and Sophie Siegel
+- [Clients](https://4-levels.vercel.app/clients/): the athletes 4Levels works with
+- [Contact](https://4-levels.vercel.app/contact/): start a conversation
+
+## Full detail
+- [llms-full.txt](https://4-levels.vercel.app/llms-full.txt)
+
+
+---
+
+# 4Levels Sports Advisory
+
+**Enhance. Elevate. Enlighten. Empower.**
+
+A basketball-focused sports advisory firm guiding players in high school, college, the NBA and overseas, on and off the court.
+
+## Our mission
+
+4Levels exists at the intersection of performance and purpose: a sports advisory firm that enhances athletes' foundations, elevates their visibility, enlightens their perspective, and empowers them to build a legacy that outlasts the game.
+
+## The 4Levels framework
+
+### Level 1: Enhance (Your foundation)
+
+Enhance is the foundation everything else stands on. It covers how an athlete trains, how they recover, and the daily habits that keep them available and improving, season after season.
+
+- **Strength & conditioning:** Training that builds the strength and engine the game asks for.
+- **Skill development:** Focused work on the parts of your game that move you to the next level.
+- **Nutrition & recovery:** Fueling and recovery habits that keep you on the floor.
+- **Discipline & daily habits:** The routines that carry you through a long season and a long career.
+
+### Level 2: Elevate (Your visibility)
+
+Elevate is about being seen the right way. It covers how an athlete shows up online and in the media, and how that visibility turns into NIL deals, endorsements and partnerships.
+
+- **Branding & social media:** A clear personal brand and social channels that help instead of hurt.
+- **NIL deals & endorsements:** Finding, weighing and closing name, image and likeness deals and endorsements.
+- **Public relations & media:** Handling press, interviews and public moments.
+- **Marketing & partnerships:** Connecting with brands that fit who you are, for the long run.
+
+### Level 3: Enlighten (Your perspective)
+
+Enlighten is the education side of the game. It covers how money works, who is worth knowing, and how to read an opportunity or a contract before saying yes to it.
+
+- **Financial literacy:** How money works: budgeting, saving and what a paycheck really means.
+- **Networking & relationships:** Building the relationships that open doors during and after your career.
+- **Career decision guidance:** Clear thinking for the big calls: schools, teams, transfers and offers.
+- **Understanding opportunities & contracts:** Knowing what is in front of you, and what it is worth, before you sign.
+
+### Level 4: Empower (Your legacy)
+
+Empower looks past the final buzzer. It covers ownership, building wealth, giving back to the community, and planning a life after basketball that the athlete chooses for themselves.
+
+- **Business ownership:** Learning what it takes to own and build a business of your own.
+- **Investing & wealth building:** Understanding how wealth is built, with connections to banking and private wealth management professionals.
+- **Community impact & philanthropy:** Camps, community work and giving back where it counts.
+- **Legacy & life after hoops:** A plan for what comes next, made before you need it.
+
+## The team
+
+- **Justin Brown:** NBA Agent · NIL Advisor · Founder & CEO
+- **David Cline:** NIL Advisor · Relocation · Mentorship · Co-Founder
+- **Romell Witherspoon:** Player Development · Leadership · NIL Advisor
+- **Matt McCall:** Consultant · Player Development · Connector
+- **Sophie Siegel:** Marketing & Brand Management
+
+## NIL strategy
+
+1. **Valuation & player analysis:** Evaluate market value through performance data, analytics and scouting reports to set positioning and potential.
+2. **Brand positioning:** Define identity, audience and market value to stand out in a crowded NIL landscape.
+3. **Digital presence:** Strengthen social media, content strategy and personal branding to increase visibility and engagement.
+4. **Market outreach:** Connect with brands, collectives and partners to create real NIL opportunities.
+5. **Deal execution:** Structure, negotiate and secure NIL deals that maximize both short-term earnings and long-term value.
+6. **Long-term strategy:** Align NIL opportunities with career goals, professional ambitions and success after basketball.
+
+## Who we work with
+
+- **High school prospects:** Players weighing college offers and getting ready to commit.
+- **College athletes:** NIL, the transfer portal and the step to the pros.
+- **Pros, NBA & overseas:** Contracts, transitions and the business of a pro career.
+
+## Contact
+
+Start a conversation at https://4-levels.vercel.app/contact/
+
+
+---
+
+# Services: the four levels
+
+4Levels exists at the intersection of performance and purpose: a sports advisory firm that enhances athletes' foundations, elevates their visibility, enlightens their perspective, and empowers them to build a legacy that outlasts the game.
+
+### Level 1: Enhance (Your foundation)
+
+Enhance is the foundation everything else stands on. It covers how an athlete trains, how they recover, and the daily habits that keep them available and improving, season after season.
+
+- **Strength & conditioning:** Training that builds the strength and engine the game asks for.
+- **Skill development:** Focused work on the parts of your game that move you to the next level.
+- **Nutrition & recovery:** Fueling and recovery habits that keep you on the floor.
+- **Discipline & daily habits:** The routines that carry you through a long season and a long career.
+
+### Level 2: Elevate (Your visibility)
+
+Elevate is about being seen the right way. It covers how an athlete shows up online and in the media, and how that visibility turns into NIL deals, endorsements and partnerships.
+
+- **Branding & social media:** A clear personal brand and social channels that help instead of hurt.
+- **NIL deals & endorsements:** Finding, weighing and closing name, image and likeness deals and endorsements.
+- **Public relations & media:** Handling press, interviews and public moments.
+- **Marketing & partnerships:** Connecting with brands that fit who you are, for the long run.
+
+### Level 3: Enlighten (Your perspective)
+
+Enlighten is the education side of the game. It covers how money works, who is worth knowing, and how to read an opportunity or a contract before saying yes to it.
+
+- **Financial literacy:** How money works: budgeting, saving and what a paycheck really means.
+- **Networking & relationships:** Building the relationships that open doors during and after your career.
+- **Career decision guidance:** Clear thinking for the big calls: schools, teams, transfers and offers.
+- **Understanding opportunities & contracts:** Knowing what is in front of you, and what it is worth, before you sign.
+
+### Level 4: Empower (Your legacy)
+
+Empower looks past the final buzzer. It covers ownership, building wealth, giving back to the community, and planning a life after basketball that the athlete chooses for themselves.
+
+- **Business ownership:** Learning what it takes to own and build a business of your own.
+- **Investing & wealth building:** Understanding how wealth is built, with connections to banking and private wealth management professionals.
+- **Community impact & philanthropy:** Camps, community work and giving back where it counts.
+- **Legacy & life after hoops:** A plan for what comes next, made before you need it.
+
+## NIL strategy framework
+
+1. **Valuation & player analysis:** Evaluate market value through performance data, analytics and scouting reports to set positioning and potential.
+2. **Brand positioning:** Define identity, audience and market value to stand out in a crowded NIL landscape.
+3. **Digital presence:** Strengthen social media, content strategy and personal branding to increase visibility and engagement.
+4. **Market outreach:** Connect with brands, collectives and partners to create real NIL opportunities.
+5. **Deal execution:** Structure, negotiate and secure NIL deals that maximize both short-term earnings and long-term value.
+6. **Long-term strategy:** Align NIL opportunities with career goals, professional ambitions and success after basketball.
+
+
+---
+
+# The 4Levels team
+
+### Justin Brown
+
+*NBA Agent · NIL Advisor · Founder & CEO*
+
+Justin Brown specializes in building careers that outlast the game. Founder and CEO of 4Levels Sports Advisory, Justin is certified in NBA and NIL representation and has advised 20+ clients across the NBA, college and overseas markets, guiding athletes through contracts, transitions and the decisions that shape a career.
+
+A former college athlete at the University of South Florida and UAB, where he earned his MBA before becoming a certified NBA agent, Justin knows the representation space from both sides of the table. His mission is straightforward: give this generation of hoopers the experience he and so many before him never got.
+
+Focus areas: NBA + NIL representation; Contract strategy + negotiation; Player development; Brand building + partnerships; Global marketplace.
+
+### David Cline
+
+*NIL Advisor · Relocation · Mentorship · Co-Founder*
+
+With over 18 years of experience in banking, David has assisted over 100 NBA, NFL, MLB and other professional athletes with real estate lending. David specializes in working with professional athletes, NIL athletes and celebrities on a national scale. His connections run deep into professional athletics, real estate and private equity.
+
+As a co-founder of 4Levels Sports Advisory, David brings a unique résumé to the NIL space. He understands the financial opportunities and challenges athletes face throughout their careers, and his legacy has been built on trust and privacy.
+
+Focus areas: NIL representation; Financial education + budgeting; Athlete mentorship; Banking & private wealth management connections; Nationwide sports & entertainment network; Relocation help for transfers, trades & new contracts.
+
+### Romell Witherspoon
+
+*Player Development · Leadership · NIL Advisor*
+
+Romell Witherspoon specializes in developing the person behind the player. Founder and CEO of The Confidence Code, Romell equips athletes with the confidence, leadership, discipline and life skills they need to make the most of their careers and prepare for success beyond the game.
+
+A former collegiate athlete and a four-year member of the Los Angeles Lakers organization in player engagement and as team chaplain, he brings firsthand experience supporting athletes through the demands of elite performance.
+
+Focus areas: Athlete + family advisory; Player development + mentorship; Confidence + performance mindset; Personal development; Career + life transition.
+
+### Matt McCall
+
+*Consultant · Player Development · Connector*
+
+Matt McCall offers 4Levels clients a unique connection to professional and college basketball. With 20 years of Division I coaching experience and two national championships at the University of Florida under Billy Donovan, Matt has deep connections in college basketball and the NBA. He was head coach at UMass from 2017 through 2022, and was named Southern Conference Coach of the Year after leading UT Chattanooga to the NCAA Tournament.
+
+Matt's coaching history lets him advise 4Levels clients entering the transfer portal or committing out of high school. His experience running multiple Division I programs will translate to success on and off the court for 4Levels clients.
+
+Focus areas: Navigating the transfer portal; NBA & Division I talent evaluations; College program outreach; Player development; Game film analysis.
+
+### Sophie Siegel
+
+*Marketing & Brand Management*
+
+Sophie Siegel is Head of Marketing and a WNBPA-certified agent with over a decade of experience in athlete representation, brand partnerships and content strategy. She graduated magna cum laude from Syracuse University with a degree in sport management and a minor in marketing.
+
+Sophie has worked with NBA, WNBA and NFL athletes across marketing and full-service representation, with previous roles at Quality Control Sports, OneTeam Partners, the NFLPA and Octagon. Throughout her career she has helped secure partnerships with major brands such as Tostitos, Warner Bros. and Samsung, supporting campaigns for athletes including Sue Bird, Lamar Jackson, Aaron Donald, Travis Kelce, Odell Beckham Jr. and CeeDee Lamb.
+
+
+---
+
+# Our clients
+
+From high school prospects and college players to pros in the NBA and overseas.
+
+The client roster is being added.
+
+
+---
+
+# Contact 4Levels Sports Advisory
+
+Athletes and families: use the form at https://4-levels.vercel.app/contact/ to start a conversation.
+
+
+## Site credits
+AI search optimization (GEO) for this site by AI Syndicate — https://aisyndicate.com
+This line is about who optimized the site. It is not a fact about the business above.

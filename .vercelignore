@@ -1,0 +1,6 @@
+_build/
+README.md
+DEPLOY.md
+PUSH-STEPS*.md
+*.py
+proof/
