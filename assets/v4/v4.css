@@ -135,10 +135,14 @@ body.menu-open{overflow:hidden}
   radial-gradient(38% 30% at 50% 36%,#2a2a2e 0 98%,transparent 100%),
   radial-gradient(70% 45% at 50% 100%,#232327 0 98%,transparent 100%),
   linear-gradient(180deg,#141416,#0e0e10);border:1px solid var(--line);margin-bottom:14px;transition:border-color .4s var(--ease)}
-.ath-img span{position:absolute;left:10px;top:10px;font:700 10px/1 var(--sans);letter-spacing:.2em;color:var(--dim)}
+.ath-img span{position:absolute;left:10px;top:10px;font:700 10px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
 .ath:hover .ath-img{border-color:rgba(201,168,106,.5)}
 .ath b{display:block;font:600 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase}
 .ath > span{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
+.ath > .ath-x{margin-top:3px;font-size:11.5px;color:var(--dim)}
+.ath.real .ath-img{border-color:rgba(201,168,106,.45);background:radial-gradient(80% 60% at 50% 35%,rgba(201,168,106,.14),transparent 70%),linear-gradient(180deg,#17171a,#0e0e10)}
+.ath.real .ath-img .mono{position:absolute;inset:0;left:0;top:0;display:flex;align-items:center;justify-content:center;font:400 clamp(54px,7vw,72px)/1 var(--serif);font-style:italic;letter-spacing:0;color:var(--gold2)}
+.ath.real .ath-img .soon{left:0;right:0;top:auto;bottom:12px;text-align:center;font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 
 /* WHY + STATS */
 .why{background:linear-gradient(180deg,var(--ink),var(--ink2))}
